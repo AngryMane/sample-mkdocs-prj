@@ -4,12 +4,53 @@ plugins:
   - i18n:
       docs_structure: suffix
       languages:
-        - locale: en
+        - name: en - English
+          locale: en
           default: true
-          name: English
           build: true
-        - locale: ja
-          name: Japanese
-          build: true
+          nav_translations:
+            Afsp: AFSP
+            Anims: Animations
+            Contribute: How To Contribute
+            Daedalus tools: Daedalus
+            General info: General information
+            Genome: Genome (G3/R1)
+            Lego: LeGo
+            Vdfs tools: VDFS
+            Zengin: ZenGin (G1/G2)
+            Zgamepad: zGamePad
+            Zparserextender: zParserExtender
+        - name: pl - Polski
+          locale: pl
+          default: false
+          build: !ENV [GMC_ENABLE_ON_PUBLISH, True]
+          site_description: 'Gothic Modding Community to zbiór pomocnych materiałów do modowania gier Gothic i Risen.'
+          nav_translations:
+            Anims: Animacje
+            Applications: Zastosowania
+            Classes: Klasy
+            Contribute: Jak Się Udzielić
+            Examples: Przykłady
+            Extenders: Extendery
+            Extensions: Rozszerzenia
+            Functions: Funkcje
+            General info: Informacje ogólne
+            Home: Strona Główna
+            Plugins: Wtyczki
+            Scripts: Skrypty
+            Sound: Dźwięk
+            Standalone: Samodzielne
+            Syntax extensions: Rozszerzenia składni
+            Tools: Narzędzia
+            Tutorials: Poradniki
+            Various: Różne
+            Worlds: Światy
+        - name: cs - Čeština
+          locale: cs
+          default: false
+          build: !ENV [GMC_ENABLE_ON_PUBLISH, True]
+          site_description: 'Dokumentace, návody a články zaměřené na modování her Gothic a Risen.'
 theme:
     name: material
+    custom_dir: overrides
+
